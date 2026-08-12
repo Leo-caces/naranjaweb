@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import 'tailwind-animations';
+
+
+:root {
+  --primary: #ff6500 ; 
+  --secondary: #d9480f;
+  --background: #202325;
+  --foreground: #ededed;
+  --sectiongray: #f1f3f5;
+  --fontgray: #354b60;
+  --calipso: #0093d2;
+  scrollbar-gutter: stable;
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-sectionGray: var(--sectiongray);
+  --color-fontGray: var(--fontgray);
+  --color-calipso: var(--calipso);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@utility container {
+  @apply mx-auto max-w-[94%] md:px-0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+@layer utilities {
+  /* Ocultar scrollbar sin perder la funcionalidad */
+  .scrollbar-hice {
+    -ms-overflow-style: none; /* IE y Edge */
+    scrollbar-width: none; /* Chrome, Safari y Opera */
+  }
+
+  .clip-round {
+    clip-path: ellipse(85% 100% at 50% 100%);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Opera */
+  }
+}
+
+@keyframes bgToBlack {
+  from { background-color: var(--headerGradient); }
+  to { background-color: black; }
+}
+
+/* globals.css */
+.header-base {
+  position: relative;
+  background: linear-gradient(to bottom, var(--primary), transparent);
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.header-base.scrolled {
+  background: #202325;
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animate-infinite {
+    animation-iteration-count: infinite;
+  }
+}
