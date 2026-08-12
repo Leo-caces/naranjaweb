@@ -1,24 +1,13 @@
-export interface StrapiMedia {
-    id: number | string
-    documentId: string
-    url: string
-    alternativeText?: string
-}
+import type { StaticImageData } from "next/image"
 
-export interface ServicesCardItem {
-    id: number | string
-    serviceTitle: string
-    servicesDescription: string
-    serviceIcon?: StrapiMedia
-}
-
-export interface ServicesTitleSection {
+export interface Service {
+    id: string
     title: string
-    subTitle: string
-    titleHighlighted: string
-}
-
-export interface ServicesSection {
-    servicesCard: ServicesCardItem[]
-    servicesTitle: ServicesTitleSection
+    description: string
+    url: string
+    image: {
+        logo: StaticImageData
+        width: number
+        height: number
+    }
 }

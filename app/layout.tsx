@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { getHomePage } from "@/lib/strapi";
+import { HOME_CONTENT } from "@/consts/homepage";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -9,24 +9,7 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  try {
-    const pageData = await getHomePage();
-    const title = pageData?.title;
-    const description = pageData?.description;
-
-    return {
-      title: title ?? "Naranja Web",
-      description: description ?? "Agencia de Marketing Digital",
-    };
-  } catch (error) {
-    console.error('generateMetadata error:', error);
-    return {
-      title: "Naranja Web",
-      description: "Agencia de Marketing Digital",
-    };
-  }
-}
+export const metadata: Metadata = HOME_CONTENT.metadata;
 
 
 export default function RootLayout({
@@ -36,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${poppins.variable}  h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

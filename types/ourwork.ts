@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image"
+
 type OurWorkId = 
  | "jardinamanda"
  | "radiovalpo"
@@ -25,40 +27,13 @@ export interface OurWork {
     description: string
     url: string
     image: {
-        thumbnail: any
+        thumbnail: StaticImageData
         width: number
         height: number
     }
     logo: {
-        icon: any
+        icon: StaticImageData
         width: number
         height: number
     }
-}
-
-export interface StrapiMedia {
-  id: number | string
-  documentId: string
-  url: string
-  alternativeText?: string
-}
-
-export interface WorkCardItem {
-  id: number | string
-  titleCard: string
-  descriptionCard: string
-  url?: string
-  imageCard?: StrapiMedia
-  iconCard?: StrapiMedia
-}
-
-export interface OurWorkTitleSection {
-  title: string
-  subTitle: string
-  titleHighlighted: string
-}
-
-export interface OurWorkSection {
-  ourWorkTitle: OurWorkTitleSection
-  workCard: WorkCardItem[]
 }

@@ -1,11 +1,11 @@
-import type { ServicesCardItem } from '@/types/services'
+import type { Service } from '@/types/services'
 
 import DisenoWeb from '@/public/icon-website.svg'
 import SemLogo from '@/public/icon-social-media.svg'
 import SEO from '@/public/icon-seo.svg'
 import Mktng from '@/public/icon-emailmarketing.svg'
 
-export const SERVICES = [
+export const SERVICES: Service[] = [
     {
         id: "webdesign",
         title: "Diseño Web",
