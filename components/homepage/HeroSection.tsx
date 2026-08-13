@@ -8,7 +8,7 @@ export function HeroSection() {
     const { heading, subHeading, link } = HOME_CONTENT.hero
 
   return (
-    <div className="relative h-[50vh] md:h-[90vh] w-full inset-0 overflow-hidden">
+    <div className="relative min-h-[90dvh] md:min-h-[90dvh] w-full inset-0 overflow-hidden">
         <Image
             src={HeroBg}
             alt="Portada de Naranja Web"
@@ -33,7 +33,7 @@ export function HeroSection() {
             }}
         ></div>
         <div className="absolute inset-0 z-30 flex flex-col items-center justify-center">
-            <div className="flex flex-col items-center justify-center text-center">
+            <div className="flex flex-col items-center justify-center text-center px-6 md:max-w-[60vw]">
                 <h1 className="font-semibold text-white text-5xl md:text-[90px] mb-2 animate-fade-in-right">{heading}</h1>
                 <p className="text-white text-2xl md:text-4xl mb-6 animate-fade-in-right animate-delay-400">{subHeading}</p>
                 <Link 

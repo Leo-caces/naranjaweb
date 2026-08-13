@@ -5,25 +5,25 @@ export const HOME_CONTENT = {
       "Diseño web, posicionamiento SEO, gestión de redes sociales y email marketing.",
   },
   hero: {
-    heading: "Mejoramos tus resultados en internet",
+    heading: "Naranja Web",
     subHeading:
-      "Diseño web y marketing digital para hacer crecer tu negocio",
+      "Agencia de Marketing Digital",
     link: {
       href: "/contacto",
-      label: "Evaluemos tu proyecto",
+      label: "¡Conversemos!",
     },
   },
   services: {
-    title: "Nuestros",
-    highlighted: "Servicios",
+    title: "Publicidad",
+    highlighted: "Digital",
     description:
-      "Estrategia, diseño y tecnología para fortalecer tu presencia digital",
+      "Creamos soluciones digitales coherentes con sus objetivos",
   },
   work: {
     title: "Nuestro",
     highlighted: "Trabajo",
     description:
-      "Proyectos digitales desarrollados para marcas, medios y organizaciones",
+      "Disponemos de todas las herramientas y servicios que necesitas",
   },
   clients: {
     title: "Nuestros",

@@ -10,7 +10,7 @@ const ContactZone = () => {
             <div className="mt-8 overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="p-6 mr-2">
-                        <h1 className="text-4xl sm:text-4xl text-gray-600 font-extrabold tracking-tight">
+                        <h1 className="text-4xl sm:text-4xl text-gray-600 font-bold tracking-tight">
                             Mejoramos sus resultados en internet
                         </h1>
                         <p className="flex flex-col xl:flex-row text-normal text-lg sm:text-2xl font-medium text-gray-600 mt-2 text-nowrap">
@@ -89,7 +89,7 @@ const ContactZone = () => {
                         </div>
 
                         <button type="submit" className="md:w-32 bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-lg mt-3 transition ease-in-out duration-300">
-                            Submit
+                            Enviar
                         </button>
                     </form>
                 </div>
